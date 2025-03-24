@@ -1,0 +1,418 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+header, footer {
+    background-color: #f8f1f1;
+    padding: 20px;
+    text-align: center;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header img {
+    height: 50px;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+nav a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 500;
+}
+nav a:hover {
+    color: #ff1b1b;
+    text-decoration: underline;
+
+
+}
+.carousel-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+    height: 100%;
+}
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    height: 100%;
+    position: relative;
+}
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.carousel-item .info {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+}
+.carousel-item .info h3 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+.carousel-item .info p {
+    margin: 5px 0;
+}
+.carousel-item .info .price {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+.carousel-item .info .buttons {
+    margin-top: 10px;
+}
+.carousel-item .info .buttons button {
+    background-color: #fcd5ce;
+    color: #6b7280;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+}
+.carousel-item .info .buttons button:hover {
+    background-color: #f8b4a6;
+}
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+.carousel-button.left {
+    left: 10px;
+}
+.carousel-button.right {
+    right: 10px;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+section {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+}
+h2 {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #374151;
+    margin-bottom: 20px;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+.grid div {
+    background-color: #f3f4f6;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+.grid h3 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #374151;
+    margin-bottom: 10px;
+}
+.grid p {
+    color: #6b7280;
+    margin-bottom: 15px;
+}
+.grid a {
+    color: #3b82f6;
+    text-decoration: none;
+}
+.grid a:hover {
+    color: #2563eb;
+}
+.grid .buttons {
+    margin-top: 10px;
+}
+.grid .buttons button {
+    background-color: #fcd5ce;
+    color: #6b7280;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+}
+.grid .buttons button:hover {
+    background-color: #f8b4a6;
+}
+form label {
+    display: block;
+    color: #374151;
+    margin-bottom: 5px;
+}
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+form button {
+    background-color: #fcd5ce;
+    color: #6b7280;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+form button:hover {
+    background-color: #f8b4a6;
+}
+/* General Styling */
+.about-us-section {
+    background: linear-gradient(135deg, #f3f4f6, #ffffff);
+    padding: 60px 20px;
+    overflow: hidden;
+}
+
+.about-us-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-us-heading {
+    font-size: 3rem;
+    color: #1e293b;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+    animation: fadeInDown 1.5s ease-in-out;
+}
+
+.about-us-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.about-us-text {
+    flex: 1;
+    text-align: left;
+    animation: fadeInLeft 1.5s ease-in-out;
+}
+
+.about-us-intro {
+    font-size: 1.5rem;
+    color: #1e293b;
+    font-weight: 600;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.about-us-detail {
+    font-size: 1.1rem;
+    color: #6b7280;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.about-us-cta {
+    display: inline-block;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+.about-us-cta:hover {
+    background-color: #333333;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.about-us-visuals {
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    animation: fadeInRight 1.5s ease-in-out;
+}
+
+.visual-item {
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.visual-item:hover {
+    transform: translateY(-10px);
+}
+
+.visual-item img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.visual-item:hover img {
+    transform: scale(1.1);
+}
+
+.visual-label {
+    font-size: 1rem;
+    color: #1e293b;
+    font-weight: 500;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+#testimonials {
+    overflow: hidden; /* Hide overflow to keep the scrolling inside the container */
+    position: relative;
+    width: 100%; /* Ensure it takes the full width of its parent */
+}
+
+.testimonials-container {
+    display: flex;
+    width: 200%; /* Double the width to accommodate duplicated testimonials */
+    animation: scroll 20s linear infinite; /* Adjust duration for speed */
+}
+
+.grid {
+    display: flex;
+    width: 100%; /* Each set of testimonials takes 50% of the container */
+}
+
+.testimonials .rating {
+    color: #ff69b4; /* Light shade of dark pink */
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%); /* Move the container to the left by 50% */
+    }
+}
+footer {
+    background-color: #ffe2a9;
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    text-align: center;
+}
+footer a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    margin: 0 10px;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+#gallery {
+    text-align: center;
+    padding: 40px 0;
+}
+
+#gallery .grid {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+#gallery .grid img {
+    width: 100%;
+    max-width: 250px; /* Limits image size */
+    height: auto;
+    border-radius: 10px; /* Optional: Rounds edges for a sleek look */
+    transition: transform 0.3s ease-in-out;
+}
+
+#gallery .grid img:hover {
+    transform: scale(1.05);
+}
